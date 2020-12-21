@@ -17,8 +17,9 @@ namespace pets.WebAPI
 
         public IConfiguration Configuration { get; }
 
-        public void ConfigureServices(IServiceCollection services)
-        {
+        public void ConfigureServices(IServiceCollection services) {
+            services.AddCors();
+
             services.ConfigureMysqlContext(Configuration);
             services.ConfigureRepositoryWrapper();
 
@@ -39,6 +40,8 @@ namespace pets.WebAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(builder => builder.AllowAnyOrigin());
 
             app.UseAuthorization();
 
