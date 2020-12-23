@@ -18,8 +18,6 @@
     },
     "pets.WebAPI": {
       "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "api/owner",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

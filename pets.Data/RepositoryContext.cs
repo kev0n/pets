@@ -19,9 +19,6 @@ namespace pets.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Owner>()
-                .HasMany(c => c.Pets)
-                .WithOne(e => e.Owner);
         }
     }
 }
